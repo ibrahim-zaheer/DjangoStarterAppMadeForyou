@@ -122,3 +122,25 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#add this code for email related things:
+# settings.py
+
+# URL to redirect to after a user successfully resets their password.
+LOGIN_REDIRECT_URL = '/'
+
+# A list of strings representing the name of the allowed host for the site.
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+
+# Set up the email backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'zaheeribrahim346@gmail.com'  # Replace with your Gmail address
+EMAIL_HOST_PASSWORD = 'aueu vjee xnzj hnhv'  # Replace with your Gmail password or app-specific password
